@@ -48,7 +48,7 @@ const Header = () => {
           </button>
         ) : (
           <button
-            onClick={() => router.push("login")}
+            onClick={() => router.push("/login")}
             className="tw-text-white"
           >
             LOGIN

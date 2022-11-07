@@ -79,8 +79,33 @@ const AuthProvider = ({ children }) => {
     router.push("/login");
   }, []);
 
+  //Register user
+  const signUp = useCallback(async ({ email, password, name }) => {
+    const authentication = {
+      email: email,
+      password: password,
+      name: name,
+    };
+
+    try {
+      const response = await api.post(`/user`, authentication);
+
+      if (response.status == 406) {
+        console.log("Email existent");
+      }
+
+      if (response.status == 200) {
+        router.push("/login");
+      }
+
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
+
   return (
-    <AuthContext.Provider value={{ token, user, signIn, signOut }}>
+    <AuthContext.Provider value={{ token, user, signIn, signOut, signUp }}>
       {children}
     </AuthContext.Provider>
   );

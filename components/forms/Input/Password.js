@@ -31,11 +31,5 @@ export function Password({ ...props }) {
     }
   }
 
-  return (
-    <Input
-      type={isVisible ? "text" : "password"}
-      rightElement={<EyeElement />}
-      {...props}
-    />
-  );
+  return <Input type={isVisible ? "text" : "password"} {...props} />;
 }
