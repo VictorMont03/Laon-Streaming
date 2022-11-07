@@ -37,3 +37,8 @@ input:-webkit-autofill
 #movie-card:hover img{
   transform: scale(1.1);
 }
+
+#-category-active{
+  background-color:#B5B3CB ;
+  color: #1F1D2F ;
+}
