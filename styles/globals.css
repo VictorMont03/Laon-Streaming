@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html,
 body {
   padding: 0;
@@ -15,12 +20,20 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+button{
+  transition: all 0.5s;
+}
+
+input:-webkit-autofill 
+{    
+    -webkit-box-shadow: 0 0 0px 1000px #1F1D2F inset !important;
+    -webkit-text-fill-color: #B5B3CB !important;
+}
+
+#movie-card img{
+  transition: all 0.5s;
+}
+
+#movie-card:hover img{
+  transform: scale(1.1);
 }
